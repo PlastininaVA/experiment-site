@@ -120,22 +120,32 @@
         Учебный эксперимент по курсу «Цифровые технологии в управлении»
     </div>
 </div>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=105330248', 'ym');
 
-<!-- Здесь позже будет код Яндекс.Метрики -->
-
+    ym(105330248, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/105330248" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 <script>
     // В этих функциях мы будем вызывать цели Метрики
     function chooseGuarantee() {
         // Заменишь XXXXXXXX на ID своего счётчика
         if (typeof ym === "function") {
-            ym(XXXXXXXX, "reachGoal", "choose_guarantee");
+            ym(105330248, "reachGoal", "choose_guarantee");
         }
         alert("Спасибо! Вы выбрали курс с гарантией результата.");
     }
 
     function chooseDiscount() {
         if (typeof ym === "function") {
-            ym(XXXXXXXX, "reachGoal", "choose_discount");
+            ym(105330248, "reachGoal", "choose_discount");
         }
         alert("Спасибо! Вы выбрали курс со скидкой.");
     }
