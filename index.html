@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Эксперимент: какой курс вы выберете?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 24px 16px 40px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        p.subtitle {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 24px;
+            color: #555;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            padding: 20px;
+            max-width: 420px;
+            flex: 1 1 280px;
+        }
+        .card h2 {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+        .card ul {
+            padding-left: 20px;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 999px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .btn-primary {
+            background: #0077ff;
+            color: #fff;
+        }
+        .btn-secondary {
+            background: #ff9800;
+            color: #fff;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 32px;
+            font-size: 13px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Какой курс вы выберете?</h1>
+    <p class="subtitle">
+        Помогите нам проверить гипотезу: что важнее при выборе курса &mdash; гарантия результата или скидка.
+    </p>
+
+    <div class="cards">
+        <!-- Карточка 1: гарантия результата -->
+        <div class="card">
+            <h2>Курс с гарантией результата</h2>
+            <ul>
+                <li>Чёткая программа обучения</li>
+                <li>Домашние задания с проверкой</li>
+                <li>Персональная обратная связь от экспертов</li>
+            </ul>
+            <p>
+                Если после прохождения курса вы не достигнете заявленного результата, мы вернём деньги
+                или продлим доступ к занятиям.
+            </p>
+            <button class="btn btn-primary" onclick="chooseGuarantee()">
+                Выбрать курс с гарантией
+            </button>
+        </div>
+
+        <!-- Карточка 2: скидка -->
+        <div class="card">
+            <h2>Курс со скидкой 50%</h2>
+            <ul>
+                <li>Та же программа обучения</li>
+                <li>Доступ к материалам в записи</li>
+                <li>Поддержка в общем чате</li>
+            </ul>
+            <p>
+                Специальное предложение: скидка 50% при оплате в течение ближайших 24 часов.
+            </p>
+            <button class="btn btn-secondary" onclick="chooseDiscount()">
+                Выбрать курс со скидкой
+            </button>
+        </div>
+    </div>
+
+    <div class="footer">
+        Учебный эксперимент по курсу «Цифровые технологии в управлении»
+    </div>
+</div>
+
+<!-- Здесь позже будет код Яндекс.Метрики -->
+
+<script>
+    // В этих функциях мы будем вызывать цели Метрики
+    function chooseGuarantee() {
+        // Заменишь XXXXXXXX на ID своего счётчика
+        if (typeof ym === "function") {
+            ym(XXXXXXXX, "reachGoal", "choose_guarantee");
+        }
+        alert("Спасибо! Вы выбрали курс с гарантией результата.");
+    }
+
+    function chooseDiscount() {
+        if (typeof ym === "function") {
+            ym(XXXXXXXX, "reachGoal", "choose_discount");
+        }
+        alert("Спасибо! Вы выбрали курс со скидкой.");
+    }
+</script>
+</body>
+</html>
